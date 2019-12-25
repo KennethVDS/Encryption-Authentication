@@ -23,7 +23,7 @@ includes: <br>
 - AES encryption through SQL <br>
 - SSL encryption through PHP <br>
 - Transparent Data (at rest) Encryption <br>
-- Components to Create, Read, Update & Delete Encrypted Data for MySQL 5.7 <br>
+- Components to Create, Read, Update, Search & Delete Encrypted Data for MySQL 5.7 <br>
 - Key Generator
 <br>
 

@@ -1,11 +1,11 @@
 ## Monkeyproof
 # MySQL Encryption
 ## field level encryption
-![index](./docs/images/index.png)
+![index](index.png)
 <br>
 Display the encrypted data readable and searchable.<br>
 Encrypt your sensitive data when added to database.<br>
-![EncryptedDB](./docs/images/sql.png)
+![database](database.png)
 
 ## TDE
 ![Encrypted](./docs/images/activeTde.png)

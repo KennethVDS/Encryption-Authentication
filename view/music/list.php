@@ -1,0 +1,43 @@
+<!-- view/music/list.php -->
+<?php $judul = 'Music Database' 
+?>
+
+<?php ob_start() ?>
+	<br>
+    <center><h1>Music</h1></center>
+	<br>
+	<div class="table-responsive"> 
+    <!-- Search form -->
+    <div class="md-form mt-0">
+    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+    </div>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Artist</th>
+            <th>Track</th>
+            <th>Album</th>
+            <th>Year</th>
+            <th>Detail</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <?php foreach ($music as $row): ?>
+        <tr>
+            <td><?= $row['id'] ?></td>
+            <td><?= $row['name_decrypt'] ?></td>
+            <td><?= $row['track'] ?></td>
+            <td><?= $row['album'] ?></td>
+            <td><?= $row['released'] ?></td>
+            <td><a href="http://localhost/pdomvc/index.php/music/detail?id=<?= $row['id'] ?>" class="btn btn-success btn-xs"> Detail</a></td>
+            <td><a href="http://localhost/pdomvc/index.php/music/edit?id=<?= $row['id'] ?>" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</a></td>
+            <td><a href="http://localhost/pdomvc/index.php/music/delete?id=<?= $row['id']?>" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> Delete</a></td>
+        </tr>
+        <?php endforeach ?>
+    </table>
+	</div>
+    <br>
+    <a href="http://localhost/pdomvc/index.php/music/create" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-plus"></span> Add new</a>
+<?php $isi = ob_get_clean() ?>
+
+<?php include 'view/template.php' ?>

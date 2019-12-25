@@ -8,7 +8,7 @@ Encrypt your sensitive data when added to database.<br>
 ![database](database.png)
 
 ## TDE
-![Encrypted](./docs/images/activeTde.png)
+![Encrypted](activeTde.png)
 <br>
 lightweight option for an extra layer of safety.<br>
 

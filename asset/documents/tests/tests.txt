@@ -1,0 +1,14 @@
+1 rij toegevoegd.
+Toegevoegd rijnummer: 23 (Query duurde 0,0026 seconden.)
+
+6460 rijen toegevoegd.
+Toegevoegd rijnummer: 6508 (Query duurde 0,1349 seconden.)
+
+Weergave van records 0 - 3 (4 totaal, Query duurde 0,2045 seconden.) [id: 22... - 7...]
+SELECT id,CAST(AES_DECRYPT(name,'58703273357638792F423F4528472B4B6250655368566D597133743677397A24') AS CHAR(50)) AS name_decrypt, track, album, released FROM music WHERE CAST(AES_DECRYPT(name,'58703273357638792F423F4528472B4B6250655368566D597133743677397A24') AS CHAR(50)) LIKE '%m%' ORDER BY id DESC
+
+Weergave van records 0 - 24 (6473 totaal, Query duurde 0,0023 seconden.) [id: 6508... - 6484...]
+SELECT id,CAST(AES_DECRYPT(name,'58703273357638792F423F4528472B4B6250655368566D597133743677397A24') AS CHAR(50)) AS name_decrypt, track, album, released FROM music WHERE CAST(AES_DECRYPT(name,'58703273357638792F423F4528472B4B6250655368566D597133743677397A24') AS CHAR(50)) LIKE '%s%' ORDER BY id DESC
+
+
+

@@ -5,14 +5,14 @@ $uri = explode('/', $request);
 
 // Set form action
 if ($uri[1] === 'edit') {
-    $judul = 'Edit Music';
+    $title = 'Edit Music';
     $form_action = "http://localhost/pdomvc/index.php/music/edit?id=" . $_GET['id'];
 } else {
-    $judul = 'Add Music';
+    $title = 'Add Music';
     $form_action = "http://localhost/pdomvc/index.php/music/create";
 }
 
-$valName = isset($music['name']) ? $music['name'] : '';
+$valName = isset($music['name_decrypt']) ? $music['name_decrypt'] : '';
 $valTrack = isset($music['track']) ? $music['track'] : '';
 $valAlbum = isset($music['album']) ? $music['album'] : '';
 $valYear = isset($music['released']) ? $music['released'] : '';
@@ -20,7 +20,7 @@ $valId = isset($music['id']) ? $music['id'] : '';
 ?>
 
 <?php ob_start() ?>
-    <h1><?= $judul ?></h1>
+    <h1><?= $title ?></h1>
 
     <form action="<?= $form_action ?>" method="post">
         <?php if ($valId): ?>

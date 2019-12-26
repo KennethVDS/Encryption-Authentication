@@ -1,5 +1,5 @@
 <!-- view/music/detail.php -->
-<?php $judul = 'Musical Details' ?>
+<?php $title = 'Musical Details' ?>
 
 <?php ob_start() ?>
     <h1><?= $music['name_decrypt'] ?></h1>

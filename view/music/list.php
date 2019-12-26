@@ -1,5 +1,17 @@
 <!-- view/music/list.php -->
-<?php $judul = 'Music Database' 
+<?php 
+$request = preg_replace("|/*(.+?)/*$|", "\\1", $_SERVER['PATH_INFO']);
+$judul = 'Music Database' ;
+
+$uri = explode('/', $request);
+
+if ($uri[1] === 'search') {
+    $title = 'Search Music';
+    $form_action = "http://localhost/pdomvc/index.php/music/search";
+} else {
+    $title = 'Music';
+    $form_action = "http://localhost/pdomvc/index.php/music";
+}
 ?>
 
 <?php ob_start() ?>
@@ -9,7 +21,11 @@
 	<div class="table-responsive"> 
     <!-- Search form -->
     <div class="md-form mt-0">
-    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+    <form action="http://localhost/pdomvc/index.php/music/search" method="POST">
+        <input type="text" name="search[]" class="form-control" aria-label="Search" placeholder="Search by Artist" />
+        <input type="submit" name="submit" value="search" class="btn btn-primary" id="submit"  />
+        <i class="fa fa-fw fa-search"></i>
+    </form>
     </div>
     <table class="table">
         <tr>

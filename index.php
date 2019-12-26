@@ -25,8 +25,10 @@ if ($uri0 && $uri1 && $uri[0] === 'music' && $uri[1] === 'detail') {         // 
 } elseif ($uri0 && $uri1 && $uri[0] === 'music' && $uri[1] === 'create') {   // Create
     $controller->create();
 } elseif ($uri0 && $uri1 && $uri[0] === 'music' && $uri[1] === 'search') {   // Search
-    $controller->search();
-} elseif ($uri[0] === 'music') {                                             // Index
+    $search = $_POST['search'];
+    $controller->search($search);
+    //$controller->index();
+} elseif ($uri[0] === 'music') {                                              // Index
     $controller->index();
 } else {                                                                       // 404
     header('HTTP/1.1 404 Not Found');

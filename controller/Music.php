@@ -9,8 +9,8 @@ class Music{
 
     public function index()
     {
-        $music = $this->model->getAllmusic();
-        require 'view/music/list.php';
+            $music = $this->model->getAllmusic();
+            require 'view/music/list.php';
     }
 
     public function detail($id)
@@ -44,6 +44,15 @@ class Music{
     {
         if ($id) {
             $this->model->delete($id);
+            header("Location: http://localhost/pdomvc/index.php/music");
+        }
+    }
+    public function search($search)
+    {
+        if($_POST) {
+            $music = $this->model->searchArtist($search);
+            require 'view/music/list.php';
+        } else {
             header("Location: http://localhost/pdomvc/index.php/music");
         }
     }

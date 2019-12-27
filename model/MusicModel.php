@@ -52,7 +52,7 @@ class MusicModel{
 
         $this->db->closeDbConnection($link);
     }
-
+    
     public function update($id)
     {
         $link = $this->db->openDbConnection();
@@ -88,8 +88,9 @@ class MusicModel{
         $key = '58703273357638792F423F4528472B4B6250655368566D597133743677397A24';
         $query = "SELECT id,CAST(AES_DECRYPT(name,'$key') AS CHAR(50)) AS name_decrypt, track, album, released FROM music WHERE CAST(AES_DECRYPT(name,'$key') AS CHAR(50)) LIKE ? ORDER BY id DESC";
         $param = "%$input%";
-        $statement = $link->prepare($query);
+        $statement = $link->prepare($query);;
         $statement->execute([$param]);
+        var_dump($statement);
         $music = array();
         $row = $statement->fetchAll(PDO::FETCH_ASSOC);
         $this->db->closeDbConnection($link);

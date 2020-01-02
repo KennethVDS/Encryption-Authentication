@@ -5,7 +5,7 @@
 <br>
 Display the encrypted data readable and searchable.<br>
 Encrypt your sensitive data when added to database.<br>
-![EncryptedDBsql.png)
+![EncryptedDB](database.png)
 
 ## TDE
 ![Encrypted](activeTde.png)

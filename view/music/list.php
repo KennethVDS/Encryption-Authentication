@@ -25,7 +25,9 @@ if ($uri[1] === 'search') {
         <input type="text" name="search[]" class="form-control" aria-label="Search" placeholder="Search by Artist" />
         <input type="submit" name="submit" value="search" class="btn btn-primary" id="submit"  />
         <i class="fa fa-fw fa-search"></i>
+        <a href="http://localhost/pdomvc/index.php/music/create" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-plus"></span> Add new</a>
     </form>
+    
     </div>
     <table class="table">
         <tr>
@@ -53,7 +55,6 @@ if ($uri[1] === 'search') {
     </table>
 	</div>
     <br>
-    <a href="http://localhost/pdomvc/index.php/music/create" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-plus"></span> Add new</a>
 <?php $isi = ob_get_clean() ?>
 
 <?php include 'view/template.php' ?>

@@ -1,4 +1,6 @@
 <?php
+include "./lib/key.php";
+
 class MusicModel{
     protected $db;
 
@@ -10,7 +12,7 @@ class MusicModel{
     public function getAllMusic()
     {
         $link = $this->db->openDbConnection();
-        $key = '58703273357638792F423F4528472B4B6250655368566D597133743677397A24';
+        $key = $_POST["key"];
         $result = $link->query("SELECT id, CAST(AES_DECRYPT(name,'$key') AS CHAR(50)) AS name_decrypt , track, album, released  FROM music");
         $music = array();
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
@@ -24,7 +26,7 @@ class MusicModel{
     public function getMusicById($id)
     {
         $link = $this->db->openDbConnection();
-        $key = '58703273357638792F423F4528472B4B6250655368566D597133743677397A24';
+        $key = $_POST["key"];
         $query = "SELECT *,CAST(AES_DECRYPT(name,'$key') AS CHAR(50)) AS name_decrypt FROM music WHERE  id=:id";
         $statement = $link->prepare($query);
         //$statement->bindValue(':name', $_POST['name'], PDO::PARAM_STR);
@@ -41,7 +43,7 @@ class MusicModel{
     public function insert()
     {
         $link = $this->db->openDbConnection();
-        $key = '58703273357638792F423F4528472B4B6250655368566D597133743677397A24';
+        $key = $_POST["key"];
         $query = "INSERT INTO music (name, track, album, released) VALUES (AES_ENCRYPT(:name, '".$key."'), :track, :album, :released)";
         $statement = $link->prepare($query);
         $statement->bindValue(':name', $_POST['name'], PDO::PARAM_STR);
@@ -56,7 +58,7 @@ class MusicModel{
     public function update($id)
     {
         $link = $this->db->openDbConnection();
-        $key = '58703273357638792F423F4528472B4B6250655368566D597133743677397A24';
+        $key = $_POST["key"];
         $query = "UPDATE music SET name = AES_ENCRYPT(:name, '".$key."'), track = :track, album = :album, released = :released WHERE id = :id";
         $statement = $link->prepare($query);
         $statement->bindValue(':name', $_POST['name'], PDO::PARAM_STR);
@@ -85,12 +87,11 @@ class MusicModel{
     {
         $input = implode("|",$search);
         $link = $this->db->openDbConnection();
-        $key = '58703273357638792F423F4528472B4B6250655368566D597133743677397A24';
+        $key = $_POST["key"];
         $query = "SELECT id,CAST(AES_DECRYPT(name,'$key') AS CHAR(50)) AS name_decrypt, track, album, released FROM music WHERE CAST(AES_DECRYPT(name,'$key') AS CHAR(50)) LIKE ? ORDER BY id DESC";
         $param = "%$input%";
         $statement = $link->prepare($query);;
         $statement->execute([$param]);
-        var_dump($statement);
         $music = array();
         $row = $statement->fetchAll(PDO::FETCH_ASSOC);
         $this->db->closeDbConnection($link);

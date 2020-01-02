@@ -1,32 +1,13 @@
-## Monkeyproof
-# MySQL Encryption
-## field level encryption
-![index](index.png)
-<br>
-Display the encrypted data readable and searchable.<br>
-Encrypt your sensitive data when added to database.<br>
-![database](database.png)
+# pdomvc
+Encrypted CRUD using MVC(Model-Viewer-Controller) ,PDO and Bootstrap
 
-## TDE
-![Encrypted](activeTde.png)
-<br>
-lightweight option for an extra layer of safety.<br>
-
-## pdomvc
-Encrypted CRUD using MVC(Model-Viewer-Controller) ,PDO and Bootstrap <br>
-Access url using : http://localhost/pdomvc/index.php/music (View all list music) <br>
-and don't forget to import this database : db_latmusic.sql on mysql,mariadb,etc <br>
-
-## options 
-includes: <br>
-- PDO connection <br>
-- AES encryption through SQL <br>
-- SSL encryption through PHP <br>
-- Transparent Data (at rest) Encryption <br>
-- Components to Create, Read, Update, Search & Delete Encrypted Data for MySQL 5.7 <br>
-- Key Generator
-<br>
+Access url using : http://localhost/pdomvc/index.php/music (View all list music)
+and don't forget to import this database : db_latmusic.sql on mysql,mariadb,etc
 
 ## Required
-* PHP 5.0 or PHP 7 <br>
-* WAMPP,XAMPP,etc <br>
+* PHP 5.0 or PHP 7
+* WAMPP,XAMPP,etc
+
+
+## Results
+CRUD Menu and Viewer List

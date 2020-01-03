@@ -11,21 +11,30 @@ Grant modify permission for file and server map    <br>
 Restart MySQL    <br>
 <br>
 <br>
-SHOW PLUGINS;                    SHOW VARIABLES;          <br>                                                 
-+--------------+---------------+ +--------------------+------------------------------------------------+ <br>
-| PLUGIN_NAME  | PLUGIN_STATUS | |    Variable_name   | Value                                          |<br>
-+--------------+---------------+ +--------------------+----------------------------------------------  +  <br>
-| keyring_file | ACTIVE        | | keyring_file_data  | C:/Program Files/MySQL/MySQL Server 8.0/keyring|<br>
-+--------------+---------------+ | keyring_operations | ON                                             |<br>
-<br>
+SHOW PLUGINS;                            <br>                                                 
+
+|PLUGIN_NAME   |   PLUGIN_STATUS   | 
+|--------------|-------------------|
+| keyring_file | ACTIVE            |   <br>
+
+
+
+
+ SHOW VARIABLES;   <br>
+ 
+ |    Variable_name   | Value                                          |
+ |--------------------|----------------------------------------------  |
+ | keyring_operations | ON                                             |
+ | keyring_file_data  | C:/Program Files/MySQL/MySQL Server 8.0/keyring|
+ 
 activate encrypting:<br>
 ALTER TABLE table_name ENCRYPTION='Y';<br>
 
-SELECT TABLE_SCHEMA, TABLE_NAME, CREATE_OPTIONS FROM INFORMATION_SCHEMA.TABLES<br>
-       WHERE CREATE_OPTIONS LIKE '%ENCRYPTION%';<br>
-+--------------+------------+----------------+<br>
-| TABLE_SCHEMA | TABLE_NAME | CREATE_OPTIONS |<br>
-+--------------+------------+----------------+<br>
-| test         | t1         | ENCRYPTION="Y" |<br>
-+--------------+------------+----------------+<br>
+SELECT TABLE_SCHEMA, TABLE_NAME, CREATE_OPTIONS FROM INFORMATION_SCHEMA.TABLES     <br>
+       WHERE CREATE_OPTIONS LIKE '%ENCRYPTION%';                                   <br>
+       
+| TABLE_SCHEMA | TABLE_NAME | CREATE_OPTIONS |
+|--------------|------------|----------------|
+| test         | t1         | ENCRYPTION="Y" |
+
 

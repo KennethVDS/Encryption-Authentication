@@ -17,9 +17,9 @@ lightweight option for an extra layer of safety.<br>
 * PHP 5.0 or PHP 7 <br>
 * WAMPP,XAMPP,etc <br>
 
-## options 
+## includes:
 <br>
-includes: <br>
+
 - pdo connection <br>
 - AES encryption through SQL <br>
 - SSL encryption through PHP <br>

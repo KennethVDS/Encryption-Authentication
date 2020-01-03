@@ -22,7 +22,7 @@ $valId = isset($music['id']) ? $music['id'] : '';
 <?php ob_start() ?>
     <h1><?= $title ?></h1>
 
-    <form action="<?= $form_action ?>" method="post">
+    <form action="<?= $form_action ?>" method="POST">
         <?php if ($valId): ?>
             <input type="hidden" name="id" value="<?= $valId ?>">
         <?php endif ?>

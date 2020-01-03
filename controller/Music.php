@@ -21,7 +21,7 @@ class Music{
 
     public function create()
     {
-        if ($_POST) {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $this->model->insert();
             header("Location: http://localhost/pdomvc/index.php/music");
         } else {
@@ -31,7 +31,7 @@ class Music{
 
     public function edit($id)
     {
-        if ($_POST) {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $this->model->update($id);
             header("Location: http://localhost/pdomvc/index.php/music");
         } else {
@@ -47,9 +47,10 @@ class Music{
             header("Location: http://localhost/pdomvc/index.php/music");
         }
     }
+
     public function search($search)
     {
-        if($_POST) {
+        if($_GET) {
             $music = $this->model->searchArtist($search);
             require 'view/music/list.php';
         } else {

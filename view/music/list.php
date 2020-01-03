@@ -1,17 +1,6 @@
 <!-- view/music/list.php -->
 <?php 
-$request = preg_replace("|/*(.+?)/*$|", "\\1", $_SERVER['PATH_INFO']);
-$judul = 'Music Database' ;
-
-$uri = explode('/', $request);
-
-if ($uri[1] === 'search') {
-    $title = 'Search Music';
-    $form_action = "http://localhost/pdomvc/index.php/music/search";
-} else {
-    $title = 'Music';
-    $form_action = "http://localhost/pdomvc/index.php/music";
-}
+$title = 'Music Database' ;
 ?>
 
 <?php ob_start() ?>
@@ -21,11 +10,10 @@ if ($uri[1] === 'search') {
 	<div class="table-responsive"> 
     <!-- Search form -->
     <div class="md-form mt-0">
-    <form action="http://localhost/pdomvc/index.php/music/search" method="POST">
+    <form action="http://localhost/pdomvc/index.php/music/search" method="GET">
         <input type="text" name="search[]" class="form-control" aria-label="Search" placeholder="Search by Artist" />
         <input type="submit" name="submit" value="search" class="btn btn-primary" id="submit"  />
         <i class="fa fa-fw fa-search"></i>
-        <a href="http://localhost/pdomvc/index.php/music/create" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-plus"></span> Add new</a>
     </form>
     
     </div>
@@ -55,6 +43,7 @@ if ($uri[1] === 'search') {
     </table>
 	</div>
     <br>
+    <a href="http://localhost/pdomvc/index.php/music/create" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-plus"></span> Add new</a>
 <?php $isi = ob_get_clean() ?>
 
 <?php include 'view/template.php' ?>

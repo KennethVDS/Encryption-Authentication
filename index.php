@@ -7,7 +7,7 @@ $uri0 = isset($uri[0]);
 $uri1 = isset($uri[1]);
 
 require_once "lib/Database.php";
-require_once "controller/Music.php";
+require "controller/Music.php";
 require_once "model/MusicModel.php";
 $db = new Database();
 $model = new MusicModel($db);
@@ -16,18 +16,22 @@ $controller = new Music($model);
 if ($uri0 && $uri1 && $uri[0] === 'music' && $uri[1] === 'detail') {         // Detail
     $id = $_GET['id'];
     $controller->detail($id);
+
 } elseif ($uri0 && $uri1 && $uri[0] === 'music' && $uri[1] === 'edit') {     // Edit
     $id = $_GET['id'];
     $controller->edit($id);
+
 } elseif ($uri0 && $uri1 && $uri[0] === 'music' && $uri[1] === 'delete') {   // Delete
     $id = $_GET['id'];
     $controller->delete($id);
+
 } elseif ($uri0 && $uri1 && $uri[0] === 'music' && $uri[1] === 'create') {   // Create
     $controller->create();
+
 } elseif ($uri0 && $uri1 && $uri[0] === 'music' && $uri[1] === 'search') {   // Search
-    $search = $_POST['search'];
+    $search = $_GET['search'];
     $controller->search($search);
-    //$controller->index();
+
 } elseif ($uri[0] === 'music') {                                              // Index
     $controller->index();
 } else {                                                                       // 404

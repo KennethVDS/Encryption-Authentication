@@ -1,4 +1,4 @@
-# Monkeyproof MySQL Encryption
+# MySQL Encryption
 ## field level encryption
 ![index](index.png)
 <br>

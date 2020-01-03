@@ -1,4 +1,4 @@
-## Monkeyproof
+# Monkeyproof
 # MySQL Encryption
 ## field level encryption
 ![index](index.png)
@@ -20,7 +20,7 @@ lightweight option for an extra layer of safety.<br>
 ## includes:
 <br>
 
-- pdo connection <br>
+- Prepared pdo connection <br>
 - AES encryption through SQL <br>
 - SSL encryption through PHP <br>
 - Transparent Data (at rest) Encryption <br>

@@ -1,6 +1,5 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-require '../bin/key/key.php';
+require '../lib/key.php';
 
 function encryptIt($input){
 	$key = $_POST['$key'];

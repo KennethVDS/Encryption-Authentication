@@ -25,6 +25,8 @@ lightweight option for an extra layer of safety.<br>
 - Transparent Data (at rest) Encryption <br>
 - Components to Create, Read, Update & Delete Encrypted Data for MySQL 5.7 <br>
 - Key Generator
+- Login with Hashing password
+- Login with It's Me
 <br>
 
 # pdomvc <br>

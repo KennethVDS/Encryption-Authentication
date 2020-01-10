@@ -11,7 +11,7 @@ class MusicModel{
 
     public function getAllMusic()
     {
-        $link = $this->db->openDbConnection();
+        $link = $this->db->getConnection();
         $key = $_POST["key"];
         $result = $link->query("SELECT id, CAST(AES_DECRYPT(name,'$key') AS CHAR(50)) AS name_decrypt , track, album, released  FROM music");
         $music = array();
@@ -25,7 +25,7 @@ class MusicModel{
 
     public function getMusicById($id)
     {
-        $link = $this->db->openDbConnection();
+        $link = $this->db->getConnection();
         $key = $_POST["key"];
         $query = "SELECT *,CAST(AES_DECRYPT(name,'$key') AS CHAR(50)) AS name_decrypt FROM music WHERE  id=:id";
         $statement = $link->prepare($query);
@@ -40,7 +40,7 @@ class MusicModel{
 	
     public function insert()
     {
-        $link = $this->db->openDbConnection();
+        $link = $this->db->getConnection();
         $key = $_POST["key"];
         $query = "INSERT INTO music (name, track, album, released) VALUES (AES_ENCRYPT(:name, '".$key."'), :track, :album, :released)";
         $statement = $link->prepare($query);
@@ -55,7 +55,7 @@ class MusicModel{
     
     public function update($id)
     {
-        $link = $this->db->openDbConnection();
+        $link = $this->db->getConnection();
         $key = $_POST["key"];
         $query = "UPDATE music SET name = AES_ENCRYPT(:name, '".$key."'), track = :track, album = :album, released = :released WHERE id = :id";
         $statement = $link->prepare($query);
@@ -71,7 +71,7 @@ class MusicModel{
 
     public function delete($id)
     {
-        $link = $this->db->openDbConnection();
+        $link = $this->db->getConnection();
 
         $query = "DELETE FROM music WHERE id = :id";
         $statement = $link->prepare($query);
@@ -84,7 +84,7 @@ class MusicModel{
     public function searchArtist($search)
     {
         $input = implode("|",$search);
-        $link = $this->db->openDbConnection();
+        $link = $this->db->getConnection();
         $key = $_POST["key"];
         $query = "SELECT id,CAST(AES_DECRYPT(name,'$key') AS CHAR(50)) AS name_decrypt, track, album, released FROM music WHERE CAST(AES_DECRYPT(name,'$key') AS CHAR(50)) LIKE ? ORDER BY id DESC";
         $param = "%$input%";

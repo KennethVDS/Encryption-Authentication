@@ -1,0 +1,20 @@
+{
+    "grant_type" : "authorization_code",
+    "client_id" : "monkeyproof",
+    "response_type" : "code",
+    "scope" : "openid",
+    "redirect_uri" : "https://adveva.be/login",
+    "state" : "hashed value",
+    "nonce": "random crypto value stored as httponly sesh",
+    "acces_token" : "Monkeyproof-E2E-",
+    "token_type" : "Bearer",
+    "id_token" : "JWT.json",
+    "iss" : "monkeyproof",
+    "sub" : "32characters and unique",
+    "aud" : "gw6X9X23Tk",
+    "exp" : "about 20 years",
+    "iat" : "time from the id token",
+    "auth_time" : "timestamp",
+    "alg" : "RS256",
+    "kid" : "itsKenneth"
+}

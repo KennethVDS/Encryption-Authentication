@@ -1,0 +1,118 @@
+{
+    "grant_type" : "authorization_code",
+    "client_id" : "monkeyproof",
+    "response_type" : "code",
+    "scope" : "openid",
+    "redirect_uri" : "https://adveva.be/login",
+    "state" : "hashed value",
+    "nonce": "random crypto value stored as httponly sesh",
+    "acces_token" : "Monkeyproof-E2E-",
+    "token_type" : "Bearer",
+    "id_token" : "JWT.json",
+    "iss" : "monkeyproof",
+    "sub" : "32characters and unique",
+    "aud" : "gw6X9X23Tk",
+    "exp" : "about 20 years",
+    "iat" : "time from the id token",
+    "auth_time" : "timestamp",
+    "alg" : "RS256",
+    "kid" : "itsKenneth",
+    "request_parameter_supported": true,
+    "claims_parameter_supported": true,
+    "scopes_supported": [
+    "openid",
+    "profile",
+    "email",
+    "address",
+    "phone"
+    ],
+    "issuer": "https://e2emerchant.itsme.be/oidc",
+    "acr_values_supported": [
+    "tag:sixdots.be,2016-06:acr_basic",
+    "tag:sixdots.be,2016-06:acr_advanced",
+    "tag:sixdots.be,2016-06:acr_secured"
+    ],
+    "id_token_encryption_enc_values_supported": [
+    "A128CBC-HS256"
+    ],
+    "userinfo_encryption_enc_values_supported": [
+    "A128CBC-HS256"
+    ],
+    "authorization_endpoint": "https://e2emerchant.itsme.be/oidc/authorization",
+    "request_object_encryption_enc_values_supported": [
+    "A128CBC-HS256"
+    ],
+    "display_values_supported": [
+    "page",
+    "touch"
+    ],
+    "userinfo_signing_alg_values_supported": [
+    "RS256"
+    ],
+    "claims_supported": [
+    "name",
+    "given_name",
+    "family_name",
+    "birthdate",
+    "gender",
+    "email",
+    "email_verified",
+    "phone_number",
+    "phone_number_verified",
+    "address",
+    "locale",
+    "tag:sixdots.be,2016-06:claim_nationality",
+    "tag:sixdots.be,2016-06:claim_eid",
+    "tag:sixdots.be,2016-06:claim_city_of_birth",
+    "tag:sixdots.be,2016-06:claim_country_of_birth",
+    "tag:sixdots.be,2017-05:claim_device",
+    "tag:sixdots.be,2017-05:claim_transaction_info",
+    "tag:sixdots.be,2017-05:claim_passport_sn",
+    "tag:sixdots.be,2017-05:claim_photo"
+    ],
+    "claim_types_supported": [
+    "normal"
+    ],
+    "token_endpoint_auth_methods_supported": [
+    "private_key_jwt"
+    ],
+    "token_endpoint": "https://e2emerchant.itsme.be/oidc/token",
+    "response_types_supported": [
+    "code"
+    ],
+    "request_uri_parameter_supported": true,
+    "userinfo_encryption_alg_values_supported": [
+    "RSA-OAEP"
+    ],
+    "grant_types_supported": [
+    "authorization_code"
+    ],
+    "ui_locales_supported": [
+    "fr",
+    "nl",
+    "en",
+    "de"
+    ],
+    "userinfo_endpoint": "https://e2emerchant.itsme.be/oidc/userinfo",
+    "token_endpoint_auth_signing_alg_values_supported": [
+    "RS256"
+    ],
+    "require_request_uri_registration": false,
+    "id_token_encryption_alg_values_supported": [
+    "RSA-OAEP"
+    ],
+    "jwks_uri": "https://e2emerchant.itsme.be/oidc/jwkSet",
+    "subject_types_supported": [
+    "pairwise"
+    ],
+    "id_token_signing_alg_values_supported": [
+    "RS256"
+    ],
+    "registration_endpoint": "https://e2emerchant.itsme.be/oidc/register",
+    "request_object_signing_alg_values_supported": [
+    "RS256"
+    ],
+    "request_object_encryption_alg_values_supported": [
+    "RSA-OAEP"
+    ]
+    }

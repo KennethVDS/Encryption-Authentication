@@ -1,13 +1,13 @@
 # MySQL Encryption
 ## field level encryption
-![index](index.png)
+![index](assets/documents/images/index.png)
 <br>
 Display the encrypted data readable and searchable.<br>
 Encrypt your sensitive data when added to database.<br>
-![EncryptedDB](database.png)
+![EncryptedDB](assets/documents/images/database.png)
 
 ## TDE
-![Encrypted](activeTde.png)
+![Encrypted](assets/documents/images/activeTde.png)
 <br>
 lightweight option for an extra layer of safety.<br>
 

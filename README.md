@@ -30,9 +30,5 @@ lightweight option for an extra layer of safety.<br>
 
 ![Encrypted](asset/documents/images/itsme.png)
 <br>
-# pdomvc <br>
-Encrypted CRUD using MVC(Model-Viewer-Controller) ,PDO and Bootstrap <br>
-
-Access url using : http://localhost/pdomvc/index.php/music (View all list music) <br>
 and don't forget to import this database : db_latmusic.sql on mysql,mariadb,etc <br>
 

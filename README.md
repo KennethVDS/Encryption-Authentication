@@ -24,8 +24,8 @@ lightweight option for an extra layer of safety.<br>
 - SSL encryption through PHP <br>
 - Transparent Data (at rest) Encryption <br>
 - Components to Create, Read, Update & Delete Encrypted Data for MySQL 5.7 <br>
-- Key Generator
-- Login with Hashing password
+- Key Generator <br>
+- Login with Hashing password <br>
 - Login with It's Me
 <br>
 
@@ -35,4 +35,3 @@ Encrypted CRUD using MVC(Model-Viewer-Controller) ,PDO and Bootstrap <br>
 Access url using : http://localhost/pdomvc/index.php/music (View all list music) <br>
 and don't forget to import this database : db_latmusic.sql on mysql,mariadb,etc <br>
 
-# It's Me Authentication

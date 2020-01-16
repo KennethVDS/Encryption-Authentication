@@ -30,5 +30,3 @@ lightweight option for an extra layer of safety.<br>
 
 ![Encrypted](asset/documents/images/itsme.png)
 <br>
-and don't forget to import this database : db_latmusic.sql on mysql,mariadb,etc <br>
-

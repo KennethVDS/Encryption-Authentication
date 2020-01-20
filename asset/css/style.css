@@ -15,7 +15,7 @@ body{
     max-width:525px;
     min-height:570px;
     position:relative;
-    background:url(../../images/login.JPG) no-repeat center;
+    background:url(../documents/images/login.JPG) no-repeat center;
     box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
   }
   .login-html{
@@ -157,3 +157,4 @@ body{
   .foot-lnk{
     text-align:center;
   }
+  

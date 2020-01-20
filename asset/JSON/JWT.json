@@ -1,4 +1,7 @@
 {
+    "alg": "RS256",
+    "kid" : "itsKenneth",
+    "typ": "JWT",
     "grant_type" : "authorization_code",
     "client_id" : "monkeyproof",
     "response_type" : "code",
@@ -15,8 +18,6 @@
     "exp" : "about 20 years",
     "iat" : "time from the id token",
     "auth_time" : "timestamp",
-    "alg" : "RS256",
-    "kid" : "itsKenneth",
     "request_parameter_supported": true,
     "claims_parameter_supported": true,
     "scopes_supported": [

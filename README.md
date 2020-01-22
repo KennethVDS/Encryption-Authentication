@@ -28,5 +28,5 @@ lightweight option for an extra layer of safety.<br>
 - Login with Hashing password <br>
 - Login with It's Me
 
-![Encrypted](asset/documents/images/itsme.png)
+![Encrypted](asset/documents/images/oauth.png)
 <br>

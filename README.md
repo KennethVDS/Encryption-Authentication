@@ -26,7 +26,7 @@ lightweight option for an extra layer of safety.<br>
 - Components to Create, Read, Update & Delete Encrypted Data for MySQL 5.7 <br>
 - Key Generator <br>
 - Login with Hashing password <br>
-- Login with It's Me
+- Login with Authentication
 
 ![Encrypted](asset/documents/images/oauth.png)
 <br>

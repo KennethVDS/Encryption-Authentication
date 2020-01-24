@@ -1,4 +1,0 @@
-The implementation guide can be found via: https://docs.cmdisp.com/itsme/CM_itsme_implementation_guide.pdf
-The API documentation can be found via: https://docs.cmtelecom.com/itsme/v1
-The API can be accessed via: https://api.sandbox.cmdisp.com/itsme/v1/
-The token is: 7ef03741-2ab1-4aa1-9351-5686c7268703

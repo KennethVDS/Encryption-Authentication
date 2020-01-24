@@ -1,13 +1,13 @@
 # MySQL Encryption
 ## field level encryption
-![index](asset/documents/images/index.png)
+![index](assets/documents/images/index.png)
 <br>
 Display the encrypted data readable and searchable.<br>
 Encrypt your sensitive data when added to database.<br>
-![EncryptedDB](asset/documents/images/database.png)
+![EncryptedDB](assets/documents/images/database.png)
 
 ## TDE
-![Encrypted](asset/documents/images/activeTde.png)
+![Encrypted](assets/documents/images/activeTde.png)
 <br>
 lightweight option for an extra layer of safety.<br>
 
@@ -28,5 +28,5 @@ lightweight option for an extra layer of safety.<br>
 - Login with Hashing password <br>
 - Login with Authentication
 
-![Encrypted](asset/documents/images/oauth.png)
+![Encrypted](assets/documents/images/oauth.png)
 <br>

@@ -1,5 +1,5 @@
 <?php
-require '../lib/key.php';
+require '../assets/lib/key.php';
 
 function encryptIt($input){
 	$key = $_POST['$key'];

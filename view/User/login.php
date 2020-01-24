@@ -1,5 +1,5 @@
 <?php
-include_once '../../lib/database.php';
+include_once '../../assets/lib/database.php';
 include_once '../../model/loginModel.php';
 switch ($_GET['action']) {
     case 'Sign In' : 
@@ -42,12 +42,12 @@ switch ($_GET['action']) {
         if ($_GET['action']) {
             $params = array(
             'aud' => 'https://e2emerchant.itsme.be/oidc/authorization',
-            'scope' => 'openid service:gw6X9X23Tk profile email',
+            'scope' => 'openid service:XXXXXXX profile email',
             'redirect_uri' => 'http://localhost/pdomvc/index.php/music',
             'response_type' => 'code',
-            'client_id' => 'MONKYPROOF',
+            'client_id' => ' ',
             'acr_values' => 'tag:sixdots.be,2016-06:acr_advanced',
-            'iss' => 'MONKYPROOF',
+            'iss' => ' ',
             'state' => $state
             );
 
@@ -72,10 +72,10 @@ switch ($_GET['action']) {
             'code' => $_GET['code'],
             'redirect_uri' => 'http://localhost/pdomvc/index.php/music',
             'client_assertion' => [
-                'iss' => 'MONKYPROOF',
-                'sub' => 'MONKYPROOF',
+                'iss' => 'XXXXXXX',
+                'sub' => 'XXXXXXX',
                 'aud' => 'https://e2emerchant.itsme.be/oidc/token',
-                'jti' => '6f05ad622a3d32a5a81aee5d73a5826adb8cbf65',
+                'jti' => 'XXXXXXX',
                 'exp' => '3600'
             ],
             'client_assertion_type' => 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'

@@ -1,5 +1,5 @@
 <?php
-include "./lib/key.php";
+include "./assets/lib/key.php";
 
 class MusicModel{
     protected $db;
@@ -93,7 +93,6 @@ class MusicModel{
         $music = array();
         $row = $statement->fetchAll(PDO::FETCH_ASSOC);
         $this->db->closeDbConnection($link);
-        var_dump($statement);
 		return $row;
     }
 }

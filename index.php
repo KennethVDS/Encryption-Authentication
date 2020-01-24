@@ -6,7 +6,7 @@ $uri = explode('/', $request);
 $uri0 = isset($uri[0]);
 $uri1 = isset($uri[1]);
 
-require_once "lib/Database.php";
+require_once "assets/lib/Database.php";
 require "controller/Music.php";
 require_once "model/MusicModel.php";
 $db = new Database();

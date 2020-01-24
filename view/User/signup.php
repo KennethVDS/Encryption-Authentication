@@ -1,5 +1,5 @@
 <?php
-include_once '../../lib/database.php';
+include_once '../../assets/lib/database.php';
 include_once '../../model/loginModel.php';
  
 $database = new Database();
